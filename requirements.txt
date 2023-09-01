@@ -1,0 +1,6 @@
+colorama
+fade
+fake_useragent
+playwright
+requests
+urllib3
