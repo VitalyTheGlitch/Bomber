@@ -49,7 +49,7 @@ def run_service(service_class, module_, phone, headers, proxy, type_):
         else:
             result = getattr(module_, service_class)(phone, headers, proxy).send_sms()
     except:
-        return None
+        return
 
     return result[0]
 
