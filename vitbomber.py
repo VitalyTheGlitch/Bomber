@@ -7,7 +7,7 @@ import inspect
 import logging
 import random
 import time
-from colorama import Fore, Back, Style, init
+from colorama import Back, Fore, Style, init
 from headers_manager import update_headers, get_headers
 
 init(autoreset=True)

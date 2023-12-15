@@ -1,11 +1,11 @@
 import requests
-import secrets
-import string
-import random
 import os
 import sys
+import random
+import secrets
+import string
 from datetime import datetime
-from fake_useragent import UserAgent
+from fake_useragent import UsrAgent
 from urllib3.exceptions import InsecureRequestWarning
 
 class Service:

@@ -1,4 +1,4 @@
-from playwright.sync_api import Playwright, sync_playwright
+from playwright.sync_api import sync_playwright
 from fake_useragent import UserAgent
 
 def format_headers(headers):
@@ -40,7 +40,7 @@ def update_headers():
     headers = {}
 
     with sync_playwright() as playwright:
-        browser = playwright.chromium.launch(headless=True)
+        browser = playwright.chromium.launch()
 
         context = browser.new_context(user_agent=user_agent.random)    
 
