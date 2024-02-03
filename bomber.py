@@ -1,6 +1,5 @@
 import threading
 import fade
-import ctypes
 import os
 import sys
 import inspect
@@ -22,9 +21,7 @@ def clear():
 
 
 def banner():
-    text = 'VitBomber v1.0.0'
-
-    print(fade.fire(text))
+    print(fade.fire('Bomber'))
 
 
 def get_proxies():
@@ -183,9 +180,6 @@ log = logging.getLogger('werkzeug')
 
 try:
     while True:
-        if sys.platform == 'win32':
-            ctypes.windll.kernel32.SetConsoleTitleW('VitBomber 💣')
-
         sent = 0
         fails = 0
 
