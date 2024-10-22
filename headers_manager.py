@@ -10,10 +10,7 @@ def intercept(request):
 
     request_headers = format_headers(request.headers_array())
 
-    if 'akbars' in request.url and 'cookie' in request_headers:
-        headers['Akbars'] = request_headers
-
-    elif 'elementaree' in request.url and 'authorization' in request_headers:
+    if 'elementaree' in request.url and 'authorization' in request_headers:
         headers['Elementaree'] = request_headers
 
     elif 'leomax' in request.url and 'authorization' in request_headers:
@@ -47,11 +44,6 @@ def update_headers():
         page = context.new_page()
 
         page.on('requestfinished', intercept)
-
-        try:
-            page.goto('https://akbars.ru', wait_until='networkidle', timeout=10000)
-        except:
-            pass
 
         try:
             page.goto('https://elementaree.ru/auth/', wait_until='networkidle', timeout=10000)
